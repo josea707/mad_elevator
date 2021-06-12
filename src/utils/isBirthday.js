@@ -4,6 +4,7 @@
  * @returns {Boolean} true if today is the user's birthday.
  */
 const isBirthday = (date) => {
+  if (date === '') return false;
   var dateToday = new Date();
   dateToday = dateToday.toLocaleDateString();
   var correctDateFormat = dateToday.split('/');
