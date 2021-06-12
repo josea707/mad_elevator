@@ -17,8 +17,8 @@ const isBirthday = (date) => {
     (correctDateFormat[1] < 10
       ? '0' + correctDateFormat[1]
       : correctDateFormat[1]);
-
-  return correctDateFormat === date;
+  // This makes it work for Safari, Chrome and Firefox.
+  return correctDateFormat.includes(date);
 };
 
 export default isBirthday;
